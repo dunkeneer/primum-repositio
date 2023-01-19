@@ -16,12 +16,90 @@
     <h1>UAT Space Page</h1>
 
     <!-- This is the page title. There should only be one <h1> tag on a webpage. -->
-    <img src="UATSpaceLogo.png" alt="UAT Space Logo"
+    <img src="UATSpaceLogo.png" alt="UAT Space Logo">
     
-    <!-- This is a paragraph tag. Page text can go here. -->
+    <!-- This is a paragraph tag. Anything goes in it. -->
     <p>this is a test of the paragraph tags.</p>
 
     <!-- This is a button. A  JavaScript alert will show when the button is clicked. -->
     <input type="button" Value="Do NOT Click Me" onclick="alert('wow. I cannot believe you clicked me. it was simple instructions. you were supposed to NOT click me. you should be ashamed.');" />
+
+    <p>
+        Countdown: <span id="countdown"></span>
+    </p>
+
+    <script>
+        var currTime = 50;
+        var timeoutIncrement = 5000;
+        var timeout = 5000;
+
+        var countdownElem = document.getElementById("countdown");
+
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;
+
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;
+        
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;   
+        
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;   
+        
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;   
+
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;   
+
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;   
+
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;   
+
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;   
+
+        setTimeout(function(){
+            countdownElem.innerHTML = currTime;
+            currTime = currTime - 5;
+        }, timeout);
+        timeout = timeout + timeoutIncrement;   
+
+        //This is the last time we need to call setTimeout, currTime is now 0
+        setTimeout(function(){
+            alert("blastoff!");
+            countdownElem.innerHTML = "Launch Successful";
+        }, timeout);
+        </script>
 </body>
 </html>
