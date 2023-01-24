@@ -7,6 +7,8 @@
     <title>Variable Practice</title>
 
     <script>
+      /*
+      Tell a little something about yourself!
       var first_name = "";
       var last_name = "";
       var pet_species = "";
@@ -18,6 +20,46 @@
       pet = prompt("Please enter your pet's name: ");
 
       alert("Your name is " + first_name + " " + last_name + ". Your pet is a " + pet_species + " named " + pet)
+
+      ***DISABLED***
+      */
+
+      /*
+        number1 and number2 adds two numbers and returns the sum to the code
+        that called the function
+      */
+
+      function add_numbers(number1, number2){
+        //add the numbers together
+        var sum = number1 + number2;
+        //return the sum to the code that called this function
+        return sum;
+      }
+      
+      /*
+      This function multiplies the two numbers and returns the product to
+      the code that called the function
+      */
+
+      function multiply_numbers(number1, number2){
+        //multiply the numbers together
+        var product = number1 * number2
+        //return the oriduct to the code called the function
+        return product;
+      }
+      
+      //
+      var num1 = parseInt(prompt("Enter number 1: "));
+      var num2 = parseInt(prompt("Enter number 2: "));
+      // This function adds two numbers and returns the sum to the code that called the function
+      var total = add_numbers(num1, num2);
+      // This function multiplies two numbers and returns the product to the code that called the function
+      var product = multiply_numbers(num1, num2);
+
+      //show the total in a JavaScript alert
+      alert("the total is: " + total);
+      //show the product in a JavaScript alert
+      alert("The product is: " + product);
     </script>
 </head>
 <body>
