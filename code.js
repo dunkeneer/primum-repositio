@@ -8,69 +8,23 @@ function runTimer(countdownElem){
      //this value will not change and creates the five second delay
      var timeoutIncrement = 5000;
 
-     setTimeout(function(){
-        countdownElem.innerHTML = currTime;
+     //loops
+     for(var counter=0; counter < 11; counter++){
+         //comment this one
+        setTimeout(function(){
+            if(currTime == 0){
+            alert("Blastoff!");
+            countdownElem.innerHTML = "Launch successful";
+        } //half-way stretch
+            else if (currTime <25){
+            countdownElem.innerHTML = "Nothing less than 1/2 to launch, time left = " + currTime;
+        }
+        else{
+            countdownElem.innerHTML = currTime;
+        }
+
         currTime = currTime - 5;
     }, timeout);
     timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-    
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;   
-    
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;   
-    
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;   
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;   
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;   
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;   
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;   
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;   
-
-    //This is the last time we need to call setTimeout, currTime is now 0
-    setTimeout(function(){
-        alert("blastoff!");
-        countdownElem.innerHTML = "Launch Successful";
-    }, timeout);
-}
+     }
+    }
