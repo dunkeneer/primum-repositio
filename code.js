@@ -3,13 +3,13 @@ function runTimer(countdownElem){
      var currTime = 50;
 
      //tracks the current time
-     var timeout = 5000;
+     var timeout = 0;
 
      //this value will not change and creates the five second delay
-     var timeoutIncrement = 5000;
+     var timeoutIncrement = 1000;
 
      //loops
-     for(var counter=0; counter < 11; counter++){
+     for(var counter=0; counter < 51; counter++){
          //comment this one
         setTimeout(function(){
             if(currTime == 0){
@@ -23,7 +23,7 @@ function runTimer(countdownElem){
             countdownElem.innerHTML = currTime;
         }
 
-        currTime = currTime - 5;
+        currTime = currTime - 1;
     }, timeout);
     timeout = timeout + timeoutIncrement;
      }
