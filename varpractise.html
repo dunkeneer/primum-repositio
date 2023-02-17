@@ -28,6 +28,18 @@
         number1 and number2 adds two numbers and returns the sum to the code
         that called the function
       */
+ //get a number from the user and convert it to an integer (whole number)**********************
+      function checkFornumber(checkFornumber){
+        //if the input is not a number, alert the user
+        if (!Number.isInteger(checkFornumber)){
+          alert("Please enter a number!");
+          return false;
+        }
+        else{
+          //the user has entered a number and can exit the loop
+          return true;
+        }
+      }      
 
       function add_numbers(number1, number2){
         //add the numbers together
@@ -35,20 +47,39 @@
         //return the sum to the code that called this function
         return sum;
       }
-      
-      /*
-      This function multiplies the two numbers and returns the product to
-      the code that called the function
-      */
+     
+      var num1 = 0;
+      var isValidInput = true;
+      //this loop will run at least one time to get the input
+      //it will run until the user enters a number
+
+      do{
+        //get a number from the user
+        num1 = parseInt(prompt("enter number 1: "));
+        
+        isValidInput = checkFornumber(num1)
+    }while(!isValidInput); //this loop will run until the user enters a number
+
+    //get another number from the user and convert it to an integer (whole number)
+    var num2 = 0;
+
+    do{
+        //get a number from the user
+        num2 = parseInt(prompt("enter number 2: "));
+        
+        isValidInput = checkFornumber(num2)
+    }while(!isValidInput); //this loop will run until the user enters a number
+
+   //This function multiplies the two numbers and returns the product to the code that called the function
 
       function multiply_numbers(number1, number2){
         //multiply the numbers together
         var product = number1 * number2
-        //return the oriduct to the code called the function
+        //return the product to the code called the function
         return product;
       }
       
-      //
+      /*
       var num1 = parseInt(prompt("Enter number 1: "));
       var num2 = parseInt(prompt("Enter number 2: "));
       // This function adds two numbers and returns the sum to the code that called the function
@@ -60,6 +91,7 @@
       alert("the total is: " + total);
       //show the product in a JavaScript alert
       alert("The product is: " + product);
+      */
     </script>
 </head>
 <body>

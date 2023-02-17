@@ -11,6 +11,13 @@
     <!-- Every HTML site needs a title. -->
     <title>Introduction to Programming W1 Introductory Assignment</title>
     <script src="code.js"> </script>
+    <style>
+        p{
+            font-size: 14pt;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+    </style>
 </head>
 <body>
     <!-- This is the page title. There should only be one <h1> tag on a webpage. -->
@@ -26,6 +33,10 @@
     <input type="button" Value="Do NOT Click Me" onclick="alert('wow. I cannot believe you clicked me. it was simple instructions. you were supposed to NOT click me. you should be ashamed.');" />
 
     <p>
+        Welcome, <span id="userNameId"></span>
+    </p>
+
+    <p>
         Countdown: <span id="countdown"></span>
     </p>
 
@@ -38,6 +49,10 @@
         comment
         */
         
+        var userInfo = getUserInput();
+        document.getElementById("userNameId").innerHTML = userInfo;
+
+
         //shorthand to point to the
         var countdownElem = document.getElementById("countdown");
         runTimer(countdownElem);
