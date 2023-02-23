@@ -40,6 +40,9 @@
         Countdown: <span id="countdown"></span>
     </p>
 
+    <button type="button" onclick="startButtonClick();" id="btnStart">Start Countdown</button>
+    <button type="button" onclick="stopButtonClick();" id="btnStop" disabled="true">Stop Countdown</button>
+
     <script>
         //this is a single comment
         
@@ -49,13 +52,11 @@
         comment
         */
         
-        var userInfo = getUserInput();
-        document.getElementById("userNameId").innerHTML = userInfo;
+        /*var userInfo = getUserInput();
+        document.getElementById("userNameId").innerHTML = userInfo;*/
 
 
-        //shorthand to point to the
-        var countdownElem = document.getElementById("countdown");
-        runTimer(countdownElem);
+        
         </script>
 </body>
 </html>
