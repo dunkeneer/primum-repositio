@@ -1,4 +1,4 @@
-//empty function; code will be added later
+//Start Button
 function startButtonClick(){
     //don't let the user click the start button while countdown is running
     document.getElementById("btnStart").disabled = true;
@@ -11,12 +11,13 @@ function startButtonClick(){
 
 var arrInterval = new Array();
 
-//empty function; code will be added later
+//Stop button
 function stopButtonClick(){
+    //don't let the user click the stop button while countdown is running
     document.getElementById("btnStart").disabled = false;
     document.getElementById("btnStop").disabled = true;
 
-    for (counter = 0; counter <11; counter++){
+    for (counter = 0; counter <51; counter++){
         clearTimeout(arrInterval[counter]);
     }
 }
@@ -64,7 +65,7 @@ function runTimer(countdownElem){
      var timeoutIncrement = 1000;
 
      //loops
-     for(var counter=0; counter < 11; counter++){
+     for(var counter=0; counter < 51; counter++){
          //comment this one
         arrInterval[counter] = setTimeout(function(){
             if(currTime == 0){
@@ -78,8 +79,15 @@ function runTimer(countdownElem){
             countdownElem.innerHTML = currTime;
         }
 
-        currTime = currTime - 5;
+        currTime = currTime - 1;
     }, timeout);
     timeout = timeout + timeoutIncrement;
      }
     }
+
+
+    /*I have chosen Kanban as my flavor of agile
+
+    During my research, I have chosen to talk about Kanban. I believe it is the easiest board since it uses visual goals.
+    Kanban allows you to visualize your goal, called the commitment point. Then visualizes the steps it takes along the way until you reach your final step, the delivery point.
+    It is slower but much more simpler than Scrum, another flavor of agile that was made back in the 90s and is recommended to be used with Kanban by the team behind it.*/
